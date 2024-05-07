@@ -1,0 +1,25 @@
+@import '../variables.css';
+
+.app-container{
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.background-image{
+    position: fixed;
+    left: 33%;
+    bottom: 0px;
+    transform: translateX(-33%);
+    z-index: -1;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.route-box{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}

@@ -1,0 +1,7 @@
+@import '../variables.css';
+
+.footer-box{
+    width: 100%;
+    background-color: var(--secondary-color-a);
+    padding: 12px 0px;
+}

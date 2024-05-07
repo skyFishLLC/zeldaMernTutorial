@@ -1,0 +1,21 @@
+:root{
+
+    /* Color Scheme */
+    --primary-color: #0d9263;
+    --secondary-color: #494b4b;
+    --secondary-color-a: #494b4bc5;
+    --primary-color-dark: #0e5135;
+    --primary-color-light: #4aba91;
+    --tertiary-color: #d4ce46;
+    --tertiary-color-hover: #b6b03a;
+    --tertiary-color-active: #aaa438;
+    --main-background-color: #fff;
+    --main-background-color-alpha: #ffffffa9;
+    --main-text-color: #000;
+
+    /* Styles */
+    --corners: border-radius: 24px;
+
+    /* Navbar */
+    --navbar-height: 120px;
+}
