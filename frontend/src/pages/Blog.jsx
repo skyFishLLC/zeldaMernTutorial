@@ -40,8 +40,9 @@ const Blog = ({ posts, setSelectedPost }) => {
                     </div>
                     {filteredPosts.map(post => {
                         return(
-                            <GameCard post={post} setSelectedPost={setSelectedPost}/>
+                            <GameCard post={post} setSelectedPost={setSelectedPost} />
                         )
+                        {/* key={post._id} */}
                     })}
                 </div>
 

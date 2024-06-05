@@ -3,7 +3,7 @@ import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Footer, Navbar } from '../components';
 import { Admin, About, Blog, BlogPage } from '../pages';
 
-import { getPosts } from '../util';
+import { getPosts, stringToUrl } from '../util';
 import backgroundImage from '../assets/background.jpg';
 import './index.css';
 
@@ -14,6 +14,11 @@ const Index = () => {
 
     const [posts, setPosts] = useState([]);
     const [selectedPost, setSelectedPost] = useState({})
+
+    const getPostByTitle = (urlTitle) => {
+        const tempPost = posts.find(post => stringToUrl(post.title) === urlTitle);
+        setSelectedPost(tempPost);
+    }
 
     useEffect(() => {
         getPosts()
@@ -37,7 +42,7 @@ const Index = () => {
                     <Route path="/" element={<Blog posts={posts} setSelectedPost={setSelectedPost} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/admin" element={<Admin />} />
-                    <Route path="/blog/:postTitle" element={<BlogPage />} />
+                    <Route path="/blog/:postTitle" element={<BlogPage post={selectedPost} posts={posts} setSelectedPost={setSelectedPost} loadPost={getPostByTitle} />} />
                 </Routes>
                 <Footer />
             </div>

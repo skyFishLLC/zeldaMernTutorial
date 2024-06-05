@@ -1,0 +1,48 @@
+@import '../variables.css';
+
+.about-container{
+    display: flex;
+    justify-content: center;
+}
+
+.about-inner-container{
+    padding: 24px;
+    max-width: 1000px;
+    background-color: var(--main-background-color-alpha);
+}
+
+.about-header{
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.about-intro-box{
+    display: flex;
+
+    @media screen and (max-width: 500px){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+.link-about-image{
+    width: 400px;
+    object-fit: contain;
+
+    @media screen and (max-width: 900px){
+        width: 300px;
+    }
+    @media screen and (max-width: 700px){
+        width: 200px;
+    }
+}
+
+.about-intro-text{
+    font-size: xx-large;
+}
+
+.about-content{
+    font-size: x-large;
+    text-align: center;
+    padding-bottom: 50px;
+}

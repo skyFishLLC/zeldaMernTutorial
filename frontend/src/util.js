@@ -12,6 +12,11 @@ export const stringToUrl = (inputString) => {
     return inputString.toLowerCase().replace(/ /g, '-');
 };
 
+export const isEmptyObject = (obj) => {
+    return Object.keys(obj).length === 0;
+};
+
+
 // API Functions
 export const getPosts = () =>{
     return axios.get(`${BASE_URL}/post${urlPostfix}`)
